@@ -10,7 +10,7 @@ export default function StateMangment({children}) {
     const fetchLatLon = async(city)=>{
       try {
         setLoading(true)
-        const req = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`)
+        const req = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${apiKey}`)
         const data = await req.json();
         
           setLat(data[0].lat);
